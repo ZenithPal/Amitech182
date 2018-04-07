@@ -11,14 +11,14 @@ public class Contact {
     private String mname;
     private int mpic;
     //  private int mwhtsapp;
-    //  private int mcall;
+    //  private String mcall;
 
     public Contact(String post, String name, int pic) {
         mpost = post;
         mname = name;
         mpic = pic;
         //   mwhtsapp = whtsapp;
-        //mcall = call;
+        //mcall = call;  //assign in the format "tel:0123456789"
     }
 
     public String getPost() {
