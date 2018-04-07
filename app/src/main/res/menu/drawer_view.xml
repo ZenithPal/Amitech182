@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/house"
+
+            android:title="Home" />
+
+        <item
+            android:id="@+id/events"
+
+            android:title="Events" />
+        <item
+            android:id="@+id/contact"
+
+            android:title="Contact Us" />
+        <item
+            android:id="@+id/sponsor"
+
+            android:title="Our Sponsors" />
+        <item
+            android:id="@+id/developer"
+            android:title="Developers" />
+
+    </group>
+
+</menu>
