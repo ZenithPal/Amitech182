@@ -26,11 +26,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.l4digital.fastscroll.FastScrollRecyclerView;
+
 import java.util.ArrayList;
 
 public class Contact_activity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
-    private RecyclerView mRecyclerView;
+    private FastScrollRecyclerView mRecyclerView;
     private static final int MY_PERMISSIONS_CALL_PHONE = 100;
     Activity parentActivity = this;
 
@@ -44,7 +46,7 @@ public class Contact_activity extends AppCompatActivity {
         setContentView(R.layout.activity_contact_activity);
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
-        mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+        mRecyclerView = findViewById(R.id.my_recycler_view);
         mRecyclerView.setHasFixedSize(true);
         // mLayoutManager = new LinearLayoutManager(this);
         contacts = Contact.createContactList();
@@ -87,7 +89,7 @@ public class Contact_activity extends AppCompatActivity {
                     }
                 });
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
