@@ -8,27 +8,26 @@
         android:id="@+id/imageView"
         android:layout_width="108dp"
         android:layout_height="108dp"
-        android:scaleType="centerCrop"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="13dp"
-        android:layout_marginLeft="10dp"
-        android:elevation="8dp"
-        android:background="#ffffff"
         android:layout_marginBottom="13dp"
-        app:srcCompat="@drawable/ic_launcher_background"
-        />
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="13dp"
+        android:background="#ffffff"
+        android:elevation="8dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ic_launcher_background" />
 
 
     <Button
         android:id="@+id/whappIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="  whatsapp"
-        android:layout_alignStart="@+id/textView1"
         android:layout_alignBottom="@+id/imageView"
+        android:layout_alignStart="@+id/name"
         android:background="@null"
-        android:drawableStart="@drawable/iconwhatsapp"
+        android:drawableStart="@drawable/ic_whatsapp"
+        android:text="  whatsapp"
         android:textColor="#424242"
 
         />
@@ -38,18 +37,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
+        android:layout_alignBottom="@+id/imageView"
         android:layout_marginStart="27dp"
         android:layout_toEndOf="@+id/whappIcon"
         android:background="@null"
         android:drawableStart="@drawable/ic_call_24dp"
         android:text="Call"
-        android:textColor="#424242"
-        android:layout_alignBottom="@+id/imageView"
-        />
+        android:textColor="#424242" />
 
 
     <TextView
-        android:id="@+id/textView0"
+        android:id="@+id/designation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/imageView"
@@ -65,12 +63,12 @@
         />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/callIcon"
-        android:layout_alignStart="@+id/textView0"
-        android:layout_below="@id/textView0"
+        android:layout_alignStart="@+id/designation"
+        android:layout_below="@id/designation"
         android:text="Yes I am"
         android:textAllCaps="true"
         android:textColor="#616161"
