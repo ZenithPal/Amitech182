@@ -27,9 +27,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by Chaitanya on 20-03-2018.
- */
 public class Contact_activity extends AppCompatActivity {
     private static final int MY_PERMISSIONS_CALL_PHONE = 100;
     private DrawerLayout mDrawerLayout;

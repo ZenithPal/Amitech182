@@ -2,10 +2,6 @@ package fgc.amitech18;
 
 import java.util.ArrayList;
 
-/**
- * Created by Chaitanya on 20-03-2018.
- */
-
 public class Contact {
     private String mPhNumber;
     private String mpost;
