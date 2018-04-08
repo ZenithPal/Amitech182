@@ -34,7 +34,6 @@ public class Contact_activity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private FastScrollRecyclerView mRecyclerView;
     private static final int MY_PERMISSIONS_CALL_PHONE = 100;
-    Activity parentActivity = this;
 
     //    private RecyclerView.Adapter mAdapter;
     //  private RecyclerView.LayoutManager mLayoutManager;
