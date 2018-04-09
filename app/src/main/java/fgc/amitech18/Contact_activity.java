@@ -30,7 +30,6 @@ import com.l4digital.fastscroll.FastScrollRecyclerView;
 import java.util.ArrayList;
 
 public class Contact_activity extends AppCompatActivity {
-    private static final int MY_PERMISSIONS_CALL_PHONE = 100;
     private DrawerLayout mDrawerLayout;
     private FastScrollRecyclerView mRecyclerView;
     //    private RecyclerView.Adapter mAdapter;
@@ -168,16 +167,9 @@ public class Contact_activity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Uri uri = Uri.parse("tel:+"+getNumber());
-                    Intent callIntent = new Intent(Intent.ACTION_CALL);
+                    Intent callIntent = new Intent(Intent.ACTION_DIAL);
                     callIntent.setData(uri);
-
-                    if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
-                    {
-                        ActivityCompat.requestPermissions((Activity)getContext(), new String[]{Manifest.permission.CALL_PHONE}, MY_PERMISSIONS_CALL_PHONE);
-                    }
-
-                    else
-                        startActivity(callIntent);
+                    startActivity(callIntent);
                 }
             });
 
