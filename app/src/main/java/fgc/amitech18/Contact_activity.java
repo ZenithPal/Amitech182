@@ -70,10 +70,10 @@ public class Contact_activity extends AppCompatActivity {
 
                                 break;
 
-                            case R.id.sponsor:// i=new Intent(MainActivity.this,SponsorActivity.class);
+                            case R.id.sponsor: startActivity(new Intent(Contact_activity.this,SponsorActivity.class)); finish();
                                 break;
 
-                            case R.id.events: //i=new Intent(MainActivity.this,EventActivity.class);
+                            case R.id.events:  startActivity(new Intent(Contact_activity.this,EventActivity.class)); finish();//i=new Intent(MainActivity.this,EventActivity.class);
                                 break;
                             case R.id.developer:  break;
 
