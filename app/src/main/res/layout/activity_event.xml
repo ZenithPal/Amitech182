@@ -29,8 +29,7 @@
                 android:layout_alignParentTop="true"
                 android:background="?attr/colorPrimary"
                 android:minHeight="?attr/actionBarSize"
-                android:theme="?attr/actionBarTheme">
-            </android.support.v7.widget.Toolbar>
+                android:theme="?attr/actionBarTheme"></android.support.v7.widget.Toolbar>
         </android.support.design.widget.AppBarLayout>
         <android.support.v7.widget.RecyclerView
             android:id="@+id/my_recycler_view"
@@ -39,6 +38,7 @@
            />
 
     </LinearLayout>
+
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
