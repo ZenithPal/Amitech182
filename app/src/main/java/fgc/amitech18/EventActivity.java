@@ -139,9 +139,9 @@ public class EventActivity extends AppCompatActivity {
 
 // set the stroke color
             // outline.setStrokeColor(Color.parseColor("#ED4337"));
-            if(position%2==0)
-            {holder.itemView.setBackgroundColor(Color.parseColor("#EEEEEE"));
-            }
+//            if(position%2==0)
+//            {holder.itemView.setBackgroundColor(Color.parseColor("#EEEEEE"));
+//            }
         }
 
         @Override
