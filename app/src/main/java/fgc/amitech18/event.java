@@ -47,7 +47,6 @@ public class event {
         for (int i = 0; i < 21; i++) {
             event_card = new event(spoHead[i]);
             events.add(event_card);
-
         }
         return events;
 }}

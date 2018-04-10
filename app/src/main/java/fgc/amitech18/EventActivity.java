@@ -34,10 +34,12 @@ public class EventActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.getMenu().getItem(1).setChecked(true);
+
         events = event.showEvent();
-       mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         eventAdapter mAdapter = new eventAdapter(this,events);
         mRecyclerView.setAdapter(mAdapter);
+
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -76,9 +78,8 @@ public class EventActivity extends AppCompatActivity {
 
         toolbar.setTitleTextColor(Color.WHITE);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu_black_24dp);
-
-
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
