@@ -19,24 +19,26 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class EventActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private RecyclerView mRecyclerView;
 
-    private ArrayList<event> events = new ArrayList<event>();
+    private ArrayList<FestEvent> mFestEvents = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event);
         mDrawerLayout = findViewById(R.id.drawer_layout);
-        mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+        mRecyclerView = findViewById(R.id.my_recycler_view);
         mRecyclerView.setHasFixedSize(true);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.getMenu().getItem(1).setChecked(true);
-        events = event.showEvent();
+        mFestEvents = getFestEvents(getApplicationContext());
        mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        eventAdapter mAdapter = new eventAdapter(this,events);
+        EventAdapter mAdapter = new EventAdapter(mFestEvents);
         mRecyclerView.setAdapter(mAdapter);
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
@@ -67,7 +69,7 @@ public class EventActivity extends AppCompatActivity {
                     }
                 });
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
@@ -89,45 +91,54 @@ public class EventActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public class eventAdapter extends RecyclerView.Adapter<eventAdapter.ViewHolder> {
-        private ArrayList<event> mevent;
-        private Context mContext;
+    private ArrayList<FestEvent> getFestEvents(Context context){
+        int i = 0;
+        String[] eventNames;
+        ArrayList<FestEvent> events = new ArrayList<>();
+
+        eventNames = context.getResources().getStringArray(R.array.event_name_arraylist);
+        while(++i < eventNames.length){
+            events.add(new FestEvent(eventNames[i]));
+        }
+        Collections.sort(events, new Comparator<FestEvent>()
+        {
+            @Override
+            public int compare(FestEvent o1, FestEvent o2)
+            {
+                return o1.getHead().compareTo(o2.getHead());
+            }
+        });
+        return events;
+    }
+
+    public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> {
+        private ArrayList<FestEvent> mFestEvents;
 
 
         public class ViewHolder extends RecyclerView.ViewHolder {
-            // each data item is just a string in this case
             public TextView mTextView0;
-
-            private Context context;
-            public ViewHolder(Context context,View v) {
+            public ViewHolder(View v) {
                 super(v);
                 mTextView0 = v.findViewById(R.id.textView);
-                this.context = context;
             }
         }
-        public eventAdapter(Context context,ArrayList<event>events){//*****
-            mevent=events;
-            mContext=context;
+        public EventAdapter(ArrayList<FestEvent> FestEvents){
+            mFestEvents = FestEvents;
         }
 
-        private Context getContext(){
-            return mContext;
-        }
         @Override
-        public eventAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            Context context=parent.getContext();
+        public EventAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            Context context = parent.getContext();
             LayoutInflater inflater= LayoutInflater.from(context);
             View sponsorView=inflater.inflate(R.layout.event_rv_card, parent, false);
-            eventAdapter.ViewHolder vh = new eventAdapter.ViewHolder(context,sponsorView);
-
-            return vh;
+            return new EventAdapter.ViewHolder(sponsorView);
         }
 
 
         @Override
-        public void onBindViewHolder(eventAdapter.ViewHolder holder, int position) {
-            event eve=mevent.get(position);
-            TextView textView0=holder.mTextView0;
+        public void onBindViewHolder(EventAdapter.ViewHolder holder, int position) {
+            FestEvent eve= mFestEvents.get(position);
+            TextView textView0 = holder.mTextView0;
             textView0.setText(eve.getHead());
 
 
@@ -135,7 +146,6 @@ public class EventActivity extends AppCompatActivity {
             //  imageView2.setColorFilter(getResources().getC);
             //  DrawableCompat.setTint(imageView2.getDrawable(),sponsor.getCrown());
             // ImageView v = findViewById(R.id.imageView6);
-
 // set the stroke color
             // outline.setStrokeColor(Color.parseColor("#ED4337"));
             if(position%2==0)
@@ -145,6 +155,6 @@ public class EventActivity extends AppCompatActivity {
 
         @Override
         public int getItemCount() {
-            return mevent.size();
+            return mFestEvents.size();
         }
 }}
