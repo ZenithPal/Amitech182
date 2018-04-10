@@ -18,13 +18,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.l4digital.fastscroll.FastScrollRecyclerView;
+import com.l4digital.fastscroll.FastScroller;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
 public class EventActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
-    private RecyclerView mRecyclerView;
+    private FastScrollRecyclerView mRecyclerView;
 
     private ArrayList<FestEvent> mFestEvents = new ArrayList<>();
     @Override
@@ -111,7 +114,7 @@ public class EventActivity extends AppCompatActivity {
         return events;
     }
 
-    public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> {
+    public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> implements FastScroller.SectionIndexer{
         private ArrayList<FestEvent> mFestEvents;
 
 
@@ -159,4 +162,10 @@ public class EventActivity extends AppCompatActivity {
         public int getItemCount() {
             return mFestEvents.size();
         }
-}}
+
+        @Override
+        public String getSectionText(int position) {
+            return mFestEvents.get(position).getHead().substring(0,1);
+        }
+    }
+}
