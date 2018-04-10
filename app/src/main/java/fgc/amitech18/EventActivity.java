@@ -116,6 +116,7 @@ public class EventActivity extends AppCompatActivity {
 
 
         public class ViewHolder extends RecyclerView.ViewHolder {
+            // each data item is just a string in this case
             public TextView mTextView0;
             public ViewHolder(View v) {
                 super(v);
@@ -146,11 +147,12 @@ public class EventActivity extends AppCompatActivity {
             //  imageView2.setColorFilter(getResources().getC);
             //  DrawableCompat.setTint(imageView2.getDrawable(),sponsor.getCrown());
             // ImageView v = findViewById(R.id.imageView6);
+
 // set the stroke color
             // outline.setStrokeColor(Color.parseColor("#ED4337"));
-            if(position%2==0)
-            {holder.itemView.setBackgroundColor(Color.parseColor("#EEEEEE"));
-            }
+//            if(position%2==0)
+//            {holder.itemView.setBackgroundColor(Color.parseColor("#EEEEEE"));
+//            }
         }
 
         @Override
