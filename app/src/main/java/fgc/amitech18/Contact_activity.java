@@ -17,6 +17,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,6 +25,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.l4digital.fastscroll.FastScrollRecyclerView;
 
@@ -35,7 +37,6 @@ public class Contact_activity extends AppCompatActivity {
     //    private RecyclerView.Adapter mAdapter;
     //  private RecyclerView.LayoutManager mLayoutManager;
     private ArrayList<Contact> contacts = new ArrayList<Contact>();
-    private String phone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -148,11 +149,10 @@ public class Contact_activity extends AppCompatActivity {
         }
 
         @Override
-        public void onBindViewHolder(ContactsAdapter.ViewHolder holder, int position) {
-            Contact contact=mContacts.get(position);
+        public void onBindViewHolder(ContactsAdapter.ViewHolder holder, final int position) {
+            final Contact contact=mContacts.get(position);
             TextView textView=holder.mTextView1;
             textView.setText(contact.getPost());
-            phone = contact.getNumber();
             TextView textView1=holder.mTextView2;
             textView1.setText(contact.getmName());
             ImageView imageView1=holder.mImageView;
@@ -166,10 +166,13 @@ public class Contact_activity extends AppCompatActivity {
             holder.callButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Uri uri = Uri.parse("tel:+"+getNumber());
-                    Intent callIntent = new Intent(Intent.ACTION_DIAL);
-                    callIntent.setData(uri);
-                    startActivity(callIntent);
+                    if(position==24) ptoast();
+                    else {
+                        Uri uri = Uri.parse("tel:+91" + contact.getNumber());
+                        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+                        callIntent.setData(uri);
+                        startActivity(callIntent);
+                    }
                 }
             });
 
@@ -177,9 +180,12 @@ public class Contact_activity extends AppCompatActivity {
                 @Override
                 public void onClick(View view)
                 {
-                    Uri uri = Uri.parse("https://api.whatsapp.com/send?phone="+getNumber());
-                    Intent intent = new Intent(Intent.ACTION_VIEW,uri);
-                    startActivity(intent);
+                    if(position==24) wtoast();
+                    else {
+                        Uri uri = Uri.parse("https://api.whatsapp.com/send?phone=+91" + contact.getNumber());
+                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                        startActivity(intent);
+                    }
                 }
             });
         }
@@ -190,11 +196,13 @@ public class Contact_activity extends AppCompatActivity {
         }
     }
 
-    private String getNumber()
-    {
-        if(phone.equals("null"))
-            return null;
-        else
-            return "91"+phone;
+    public void ptoast(){
+        Toast toast = Toast.makeText(this, "Phone no. not available", Toast.LENGTH_SHORT);
+        toast.show();
     }
+    public void wtoast(){
+        Toast toast = Toast.makeText(this, "Whatsapp no. not available", Toast.LENGTH_SHORT);
+        toast.show();
+    }
+
 }

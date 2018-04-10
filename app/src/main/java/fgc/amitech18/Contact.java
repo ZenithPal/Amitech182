@@ -38,13 +38,12 @@ public class Contact {
         int[] picture;
         String[] phNum;
 
-
         ArrayList<Contact> contacts=new ArrayList<Contact>();
         conPost = new String[]{
                 "President",
                 "Vice President",
-                "CHIEF GENERAL MANAGER",
-                "SECRETARY",
+                "Chief General Manager",
+                "Secretary",
                 "Joint Secretary",
                 "Techmaster",
                 "Director Finance",
@@ -63,10 +62,10 @@ public class Contact {
                 "Deputy Director Discipline",
                 "Deputy Director Events",
                 "Logistics Incharge",
-                "Brand Ambassador (Male)",
-                "Brand Ambassador (Male)",
-                "Brand Ambassador (Female)",
-                "Brand Ambassador (Female)",
+                "Brand Ambassador(Male)",
+                "Brand Ambassador(Male)",
+                "Brand Ambassador(Female)",
+                "Brand Ambassador(Female)",
                 "Director Photography",
                 "Deputy Director Photography"
         };
@@ -91,7 +90,7 @@ public class Contact {
                 "Swatantra",
                 "Himank",
                 "Shekhar Jha",
-                "Annie Goel",
+                "Annie Goel ",
                 "Deepanshu Prakash",
                 "Harshit Bajaj",
                 "Siddharth Arya",
@@ -99,7 +98,6 @@ public class Contact {
                 "Harshita Sachdeva",
                 "Manit Ahuja",
                 "Shabd Sharma"
-
         };
         picture=new int[]{
                 R.drawable.ic_launcher_background,
@@ -108,66 +106,70 @@ public class Contact {
                 R.drawable.ic_launcher_foreground,
                 R.drawable.ic_launcher_foreground,
                 R.drawable.ic_launcher_foreground,
+                R.drawable.ic_launcher_background,
+                R.drawable.ic_launcher_background,
+                R.drawable.ic_launcher_background,
+                R.drawable.ic_launcher_background,
                 R.drawable.ic_launcher_foreground,
                 R.drawable.ic_launcher_foreground,
                 R.drawable.ic_launcher_foreground,
                 R.drawable.ic_launcher_foreground,
+                R.drawable.ic_launcher_background,
+                R.drawable.ic_launcher_background,
                 R.drawable.ic_launcher_foreground,
                 R.drawable.ic_launcher_foreground,
                 R.drawable.ic_launcher_foreground,
                 R.drawable.ic_launcher_foreground,
+                R.drawable.ic_launcher_background,
+                R.drawable.ic_launcher_background,
                 R.drawable.ic_launcher_foreground,
                 R.drawable.ic_launcher_foreground,
                 R.drawable.ic_launcher_foreground,
                 R.drawable.ic_launcher_foreground,
-                R.drawable.ic_launcher_foreground,
-                R.drawable.ic_launcher_foreground,
-                R.drawable.ic_launcher_foreground,
-                R.drawable.ic_launcher_foreground,
-                R.drawable.ic_launcher_foreground,
-                R.drawable.ic_launcher_foreground,
+                R.drawable.ic_launcher_background,
+                R.drawable.ic_launcher_background,
                 R.drawable.ic_launcher_foreground,
                 R.drawable.ic_launcher_foreground,
                 R.drawable.ic_launcher_foreground,
                 R.drawable.ic_launcher_foreground
         };
 
-        phNum = new String[] {
-                "9643029728",
-                "9311215051",
-                "9582228699",
-                "9990139461",
-                "9582174670",
-                "9871721631",
-                "9810281120",
-                "9873296445",
-                "9654899213",
-                "9560625808",
-                "9958967469",
-                "9871960498",
-                "8800207169",
-                "8860472629",
-                "8569993463",
-                "8750752179",
-                "8130773871",
-                "8130773871",
-                "8512093591",
-                "8802952920",
-                "7982109028",
-                "8376038306",
-                "7289961925",
-                "9717534370",
-                "9868492757",
-                "null",
-                "7532029923",
-                "9650909981",
-                "9312368006"
-        };
-
+        phNum = new String[]
+                {
+                        "9643029728",
+                        "9311215051",
+                        "9582228699",
+                        "9990139461",
+                        "9582174670",
+                        "9871721631",
+                        "9810281120",
+                        "9873296445",
+                        "9654899213",
+                        "9560625808",
+                        "9958967469",
+                        "9871960498",
+                        "8800207169",
+                        "8860472629",
+                        "8569993463",
+                        "8750752179",
+                        "8130773871",
+                        "8512093591",
+                        "8802952920",
+                        "7982109028",
+                        "8376038306",
+                        "7289961925",
+                        "9717534370",
+                        "9868492757",
+                        null,
+                        "7532029923",
+                        "9650909981",
+                        "9312368006"
+                };
         for (int i = 0; i < 28; i++) {
             contact_card = new Contact(conPost[i], conName[i], picture[i], phNum[i]);
             contacts.add(contact_card);
 
         }
         return contacts;
-    }}
+    }
+}
