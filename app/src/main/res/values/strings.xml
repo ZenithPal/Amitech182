@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">Amitech18</string>
+    <string-array name="event_name_arraylist">
+        <item>Argumentum</item>
+        <item>Battle Of Bands</item>
+        <item>Technovation</item>
+        <item>Sherlock Quiz</item>
+        <item>Stupid Cupid</item>
+        <item>Tambola</item>
+        <item>Beg Borrow Steal</item>
+        <item>Kalakaari</item>
+        <item>Fashion Fingers</item>
+        <item>Serenade</item>
+        <item>Natraj</item>
+        <item>Guess Who?</item>
+        <item>Star Night</item>
+        <item>Technovation</item>
+        <item>Counter Strike</item>
+        <item>Mini Militia</item>
+        <item>Swish 'N' Click</item>
+        <item>Ad Mad</item>
+        <item>Power To Her</item>
+        <item>Rumble Jumble</item>
+        <item>You Me Mad</item>
+    </string-array>
 </resources>
