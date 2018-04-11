@@ -32,10 +32,19 @@
                 android:theme="?attr/actionBarTheme"></android.support.v7.widget.Toolbar>
         </android.support.design.widget.AppBarLayout>
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/my_recycler_view"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent">
+            <com.l4digital.fastscroll.FastScrollRecyclerView
+                android:id="@+id/my_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:bubbleColor="@color/colorAccent"
+                app:bubbleTextColor="#ffffff"
+                app:handleColor="#999999"
+                app:hideScrollbar="false"
+                app:showTrack="false" />
+        </FrameLayout>
 
     </LinearLayout>
 
