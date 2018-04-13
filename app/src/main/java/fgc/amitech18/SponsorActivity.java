@@ -109,7 +109,7 @@ public class SponsorActivity extends AppCompatActivity {
             private Context context;
             public ViewHolder(Context context,View v) {
                 super(v);
-                mTextView0 = v.findViewById(R.id.textView);
+                mTextView0 = v.findViewById(R.id.event_name);
                 mTextView1 = v.findViewById(R.id.textView0);
                 mTextView2 = v.findViewById(R.id.textView1);
                 mImageView = v.findViewById(R.id.imageView);

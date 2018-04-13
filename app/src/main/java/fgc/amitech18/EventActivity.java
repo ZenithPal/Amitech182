@@ -1,10 +1,17 @@
 package fgc.amitech18;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.CalendarContract;
+import android.support.annotation.RequiresApi;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -22,14 +29,17 @@ import com.l4digital.fastscroll.FastScrollRecyclerView;
 import com.l4digital.fastscroll.FastScroller;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
 
 public class EventActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private FastScrollRecyclerView mRecyclerView;
-
     private ArrayList<FestEvent> mFestEvents = new ArrayList<>();
+
+    int PERMISSION_CODE = 100;
+    String[] permissions = {Manifest.permission.WRITE_CALENDAR , Manifest.permission.READ_CALENDAR};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -120,10 +130,12 @@ public class EventActivity extends AppCompatActivity {
 
         public class ViewHolder extends RecyclerView.ViewHolder {
             // each data item is just a string in this case
-            public TextView mTextView0;
+            public TextView mEvent;
+            FloatingActionButton mAdd;
             public ViewHolder(View v) {
                 super(v);
-                mTextView0 = v.findViewById(R.id.textView);
+                mEvent = v.findViewById(R.id.event_name);
+                mAdd = v.findViewById(R.id.add_to_calender);
             }
         }
         public EventAdapter(ArrayList<FestEvent> FestEvents){
@@ -141,21 +153,37 @@ public class EventActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(EventAdapter.ViewHolder holder, int position) {
-            FestEvent eve= mFestEvents.get(position);
-            TextView textView0 = holder.mTextView0;
+            final FestEvent eve = mFestEvents.get(position);
+            TextView textView0 = holder.mEvent;
+            FloatingActionButton add = holder.mAdd;
             textView0.setText(eve.getHead());
+            add.setOnClickListener(new View.OnClickListener() {
+                @RequiresApi(api = Build.VERSION_CODES.M)
+                @Override
+                public void onClick(View view) {
 
+                    Calendar beginTime = Calendar.getInstance();
+                    beginTime.set(2018, 3, 20, 7, 30);
+                    Calendar endTime = Calendar.getInstance();
+                    endTime.set(2018, 3, 21, 8, 30);
+                    Intent intent = new Intent(Intent.ACTION_INSERT)
+                            .setData(CalendarContract.Events.CONTENT_URI)
+                            .putExtra(CalendarContract.Events.TITLE, eve.getHead())
+                            .putExtra(CalendarContract.Events.EVENT_LOCATION, "Amity University, Noida")
+                            .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.getTimeInMillis())
+                            .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime.getTimeInMillis());
 
-            // imageView2.setTint(sponsor.getCrown());
-            //  imageView2.setColorFilter(getResources().getC);
-            //  DrawableCompat.setTint(imageView2.getDrawable(),sponsor.getCrown());
-            // ImageView v = findViewById(R.id.imageView6);
+                    if(ContextCompat.checkSelfPermission(EventActivity.this
+                            , Manifest.permission.READ_CALENDAR )== PackageManager.PERMISSION_GRANTED
+                            && ContextCompat.checkSelfPermission(EventActivity.this, Manifest.permission.WRITE_CALENDAR)
+                            == PackageManager.PERMISSION_GRANTED )
 
-// set the stroke color
-            // outline.setStrokeColor(Color.parseColor("#ED4337"));
-//            if(position%2==0)
-//            {holder.itemView.setBackgroundColor(Color.parseColor("#EEEEEE"));
-//            }
+                        startActivity(intent);
+
+                    else
+                        requestPermissions(permissions, 100);
+                }
+            });
         }
 
         @Override
