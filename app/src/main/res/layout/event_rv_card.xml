@@ -25,16 +25,28 @@
 
             <TextView
                 android:id="@+id/event_name"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
                 android:fontFamily="@font/oxygen_bold"
-                android:text="Title sponsor"
+                android:freezesText="true"
+
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="Title event"
                 android:textAllCaps="true"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:textColor="#424242"
                 android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/add_to_calender"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,7 +57,8 @@
                 android:layout_marginBottom="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:text="Date"
+                android:text="20 April 2018"
+                android:textSize="10sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/event_name" />
@@ -57,7 +70,8 @@
                 android:layout_marginBottom="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:text="Time"
+                android:text="12:30PM-1:30PM"
+                android:textSize="10sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/event_date"
                 app:layout_constraintTop_toBottomOf="@+id/event_name" />
@@ -69,7 +83,8 @@
                 android:layout_marginBottom="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:text="Venue"
+                android:text="I-2 HALL (MOOT COURT)"
+                android:textSize="10sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/event_time"
                 app:layout_constraintTop_toBottomOf="@+id/event_name" />
