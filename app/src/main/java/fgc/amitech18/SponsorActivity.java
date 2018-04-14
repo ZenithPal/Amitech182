@@ -33,7 +33,7 @@ public class SponsorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sponsor);
         mDrawerLayout = findViewById(R.id.drawer_layout);
-        mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
         // mLayoutManager = new LinearLayoutManager(this);
         sponsors = Sponsor.createSponsorList();
@@ -52,6 +52,8 @@ public class SponsorActivity extends AppCompatActivity {
                         mDrawerLayout.closeDrawers();
                         switch (menuItem.getItemId()) {
                             case R.id.house:
+                                startActivity(new Intent(SponsorActivity.this, MainActivity.class));
+                                finish();
                                 break;
                             //setContentView(R.layout.activity_dash);
 
@@ -73,7 +75,7 @@ public class SponsorActivity extends AppCompatActivity {
                     }
                 });
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);

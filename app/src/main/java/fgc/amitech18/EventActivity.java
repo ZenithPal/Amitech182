@@ -61,6 +61,8 @@ public class EventActivity extends AppCompatActivity {
                         mDrawerLayout.closeDrawers();
                         switch (menuItem.getItemId()) {
                             case R.id.house:
+                                startActivity(new Intent(EventActivity.this, MainActivity.class));
+                                finish();
                               break;
                             //setContentView(R.layout.activity_dash);
 

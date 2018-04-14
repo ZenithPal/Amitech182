@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/detail_iv_evimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/event_img1" />
+
+        <ImageView
+            android:id="@+id/detail_iv_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/grad_boa" />
+
+        <TextView
+            android:id="@+id/detail_tv_evname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/detail_tv_evdate"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/satisfy"
+            android:text="Argumentum"
+            android:textColor="#212121"
+            android:textSize="@dimen/title" />
+
+        <TextView
+            android:id="@+id/detail_tv_evdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/detail_tv_evname"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:fontFamily="@font/oxygen_bold"
+            android:text="25 March 2018"
+            android:textColor="#212121"
+            android:textSize="@dimen/subhead" />
+
+        <Button
+            android:id="@+id/detail_btn_nav"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/detail_tv_evdate"
+            android:layout_alignBottom="@+id/detail_tv_evdate"
+            android:layout_toStartOf="@+id/detail_btn_register"
+            android:onClick="navclick"
+            android:text="NAVIGATE"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/btn_text" />
+
+        <Button
+            android:id="@+id/detail_btn_register"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/detail_tv_evdate"
+            android:layout_alignBottom="@+id/detail_tv_evdate"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:text="REGISTER"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/btn_text" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:padding="@dimen/fab_margin">
+
+        <TextView
+            android:id="@+id/detail_tv_evdesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/oxygen"
+            android:text="event_description"
+            android:textSize="@dimen/paragraph" />
+
+        <TextView
+            android:id="@+id/detail_tv_teamsize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail_tv_evdesc"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="@dimen/section_top_margin"
+            android:layout_toEndOf="@+id/ic_act_evdetail_iv_loc"
+            android:drawablePadding="4dp"
+            android:drawableTint="#221350"
+            android:fontFamily="@font/oxygen_bold"
+            android:text="2-4 Members"
+            android:textSize="@dimen/subhead" />
+
+        <TextView
+            android:id="@+id/detail_tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/detail_tv_teamsize"
+            android:layout_below="@+id/detail_tv_teamsize"
+            android:layout_marginTop="@dimen/element_top_margin"
+            android:drawablePadding="4dp"
+            android:drawableTint="#221350"
+            android:fontFamily="@font/oxygen_bold"
+            android:text="Hall-2A"
+            android:textSize="@dimen/subhead" />
+
+        <TextView
+            android:id="@+id/detail_tv_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/detail_tv_location"
+            android:layout_marginTop="@dimen/section_top_margin"
+            android:fontFamily="@font/oxygen_bold"
+            android:text="Guidelines"
+            android:textSize="@dimen/subhead" />
+
+        <TextView
+            android:id="@+id/detail_tv_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/detail_tv_guideline"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/oxygen_light"
+            android:text="hello"
+            android:textSize="@dimen/paragraph" />
+
+        <Button
+            android:id="@+id/detail_btn_contact_fb"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="@dimen/btn_square"
+            android:layout_height="@dimen/btn_square"
+            android:layout_above="@+id/detail_btn_next"
+            android:layout_alignStart="@+id/detail_tv_rule"
+            android:layout_marginBottom="25dp"
+            android:foreground="@drawable/ic_ico_fb" />
+
+        <Button
+            android:id="@+id/detail_btn_contact_whp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="@dimen/btn_square"
+            android:layout_height="@dimen/btn_square"
+
+            android:layout_alignBottom="@+id/detail_btn_contact_fb"
+            android:layout_marginStart="@dimen/element_adj_margin"
+            android:layout_toEndOf="@+id/detail_btn_contact_fb"
+            android:foreground="@drawable/ic_ico_wp" />
+
+        <Button
+            android:id="@+id/detail_btn_prev"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:onClick="onbtnClick"
+            android:text="PREVIOUS"
+            android:textColor="#000000"
+            android:textSize="@dimen/btn_text" />
+
+        <Button
+            android:id="@+id/detail_btn_next"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="onbtnClick"
+            android:text="NEXT"
+            android:textColor="#000000"
+            android:textSize="@dimen/btn_text" />
+
+        <ImageView
+            android:id="@+id/ic_act_evdetail_iv_loc"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/detail_tv_location"
+            android:tint="@color/colorPrimaryDark"
+            app:srcCompat="@drawable/ic_place_black_24dp" />
+
+        <ImageView
+            android:id="@+id/ic_act_evdetail_iv_team"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/detail_tv_teamsize"
+            android:tint="@color/colorPrimaryDark"
+            app:srcCompat="@drawable/ic_people_black_24dp" />
+
+    </RelativeLayout>
+</LinearLayout>

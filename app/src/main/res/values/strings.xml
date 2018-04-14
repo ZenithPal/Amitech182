@@ -1,4 +1,10 @@
 <resources>
+
+    <string-array name="array">
+        <item name="home">Home</item>
+        <item name="events">Events</item>
+        <item name="contactUs">Contact Us</item>
+    </string-array>
     <string name="app_name">Amitech18</string>
     <string-array name="event_name_arraylist">
         <item>Argumentum</item>
