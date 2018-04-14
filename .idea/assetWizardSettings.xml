@@ -28,11 +28,12 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="height" value="30" />
-                            <entry key="outputName" value="ic_event_note_black_24dp" />
+                            <entry key="assetSourceType" value="FILE" />
+                            <entry key="height" value="560" />
+                            <entry key="outputName" value="ic_event_schedule_header" />
                             <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="D:\Android Assets\amplifire_gradient.svg" />
-                            <entry key="width" value="30" />
+                            <entry key="sourceFile" value="D:\Amitech app assets\event_schedule_header.svg" />
+                            <entry key="width" value="960" />
                           </map>
                         </option>
                       </PersistentState>
