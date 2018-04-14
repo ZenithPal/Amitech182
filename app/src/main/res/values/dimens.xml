@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="section_top_margin">16dp</dimen>
+    <dimen name="element_top_margin">10dp</dimen>
+    <dimen name="element_adj_margin">20dp</dimen>
+    <dimen name="layout_top_padding">10dp</dimen>
+    <dimen name="btn_square">40dp</dimen>
+</resources>

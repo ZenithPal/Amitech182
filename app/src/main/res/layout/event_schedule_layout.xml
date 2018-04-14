@@ -33,11 +33,18 @@
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="match_parent"
-                android:layout_height="223dp"
+                android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                android:cropToPadding="true"
+                android:cropToPadding="false"
                 android:scaleType="fitStart"
                 app:srcCompat="@drawable/event_schedule_day_two" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/event_schedule_lobby_events" />
         </LinearLayout>
     </ScrollView>
 
