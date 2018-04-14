@@ -6,27 +6,100 @@
         <item name="contactUs">Contact Us</item>
     </string-array>
     <string name="app_name">Amitech18</string>
-    <string-array name="event_name_arraylist">
-        <item>Argumentum</item>
-        <item>Battle Of Bands</item>
-        <item>Technovation</item>
-        <item>Sherlock Quiz</item>
-        <item>Stupid Cupid</item>
-        <item>Tambola</item>
-        <item>Beg Borrow Steal</item>
-        <item>Kalakaari</item>
-        <item>Fashion Fingers</item>
-        <item>Serenade</item>
-        <item>Natraj</item>
-        <item>Guess Who?</item>
-        <item>Star Night</item>
-        <item>Technovation</item>
-        <item>Counter Strike</item>
-        <item>Mini Militia</item>
-        <item>Swish 'N' Click</item>
-        <item>Ad Mad</item>
-        <item>Power To Her</item>
-        <item>Rumble Jumble</item>
-        <item>You Me Mad</item>
+    <string-array name="event_name">
+
+        <item> ALAAP(SOLO INDIAN MUSIC, DECIBEL)v</item>
+        <item>STAND UP COMEDY</item>
+        <item>SERENADE(SOLO WESTERN MUSIC, DECIBEL)</item>
+        <item>ALLEGRO(GROUP SONG, DECIBEL)</item>
+        <item>PIXEL JONES</item>
+        <item>LOGO MANIA (Quiz)</item>
+        <item>LAN GAMING (IEEE)</item>
+        <item> COOK WITHOUT FIRE</item>
+        <item>ARGUMENTUM (ENG + HINDI DEBATE, WORDSWORTH)</item>
+        <item>BHAAVNAYEIN (MONOACT O3)</item>
+        <item>THE GOLDEN SNITCH(QUIZ, WORDSWORTH)</item>
+        <item>JAM SESSION</item>
+        <item>NATRAJ (SOLO DANCE, D-MATRIX)</item>
+        <item>TECHNOVATION (I-CELL)</item>
+        <item>STEPPING UP (GROUP DANCE, D-MATRIX)</item>
+        <item>CLOSING CEREMONY</item>
+        <item>JAM SESSION</item>
+        <item>HACKATHON (IEEE)</item>
+        <item>LAN GAMING (IEEE)</item>
+        <item>LET"'"S BOUNCE (ZORBING)</item>
+
+    </string-array>
+
+    <string-array name="time_array">
+
+        <item>12:00PM-01:00PM</item>
+        <item>01:00PM-02:00PM</item>
+        <item>02:00PM-03:00PM</item>
+        <item>03:00PM-04:30PM</item>
+        <item>12:00PM-01:30PM</item>
+        <item>12:00PM-01:30PM</item>
+        <item>12:00PM-04:00PM</item>
+        <item>01:30PM-03:00PM</item>
+        <item>01:30PM-03:00PM</item>
+        <item>03:00PM-04:30PM</item>
+        <item>03:00PM-04:30PM</item>
+        <item>04:30PM-05:30PM</item>
+        <item>10:00AM-11:30AM</item>
+        <item>11:30AM-01:30PM</item>
+        <item>01:30PM-03:00PM</item>
+        <item>03:00PM-04:30PM</item>
+        <item>04:30PM-05:30PM</item>
+        <item>11:00AM-03:00PM</item>
+        <item>11:00AM-03:00PM</item>
+        <item>12:30PM-01:30PM</item>
+
+    </string-array>
+
+    <string-array name="venue_array">
+
+        <item>I-2 HALL (MOOT COURT)</item>
+        <item>I-2 HALL (MOOT COURT) </item>
+        <item>I-2 HALL (MOOT COURT)</item>
+        <item>I-2 HALL (MOOT COURT) </item>
+        <item>CLASSROOM 1</item>
+        <item>CLASSROOM 2</item>
+        <item>CLASSROOM 3</item>
+        <item>CLASSROOM 1</item>
+        <item>CLASSROOM 2</item>
+        <item>CLASSROOM 1</item>
+        <item>CLASSROOM 2</item>
+        <item>I-2 HALL (MOOT COURT)</item>
+        <item>I-2 HALL (MOOT COURT)</item>
+        <item>I-2 HALL (MOOT COURT)</item>
+        <item>I-2 HALL (MOOT COURT)</item>
+        <item>I-2 HALL (MOOT COURT)</item>
+        <item>I-2 HALL (MOOT COURT)</item>
+        <item>CLASSROOM 1</item>
+        <item>CLASSROOM 2</item>
+        <item>CLASSROOM 3</item>
+
+    </string-array>
+    <string-array name="date_array">
+        <item>April 20, 2018</item>
+        <item>April 20, 2018</item>
+        <item>April 20, 2018</item>
+        <item>April 20, 2018</item>
+        <item>April 20, 2018</item>
+        <item>April 20, 2018</item>
+        <item>April 20, 2018</item>
+        <item>April 20, 2018</item>
+        <item>April 20, 2018</item>
+        <item>April 20, 2018</item>
+        <item>April 20, 2018</item>
+        <item>April 21, 2018</item>
+        <item>April 21, 2018</item>
+        <item>April 21, 2018</item>
+        <item>April 21, 2018</item>
+        <item>April 21, 2018</item>
+        <item>April 21, 2018</item>
+        <item>April 21, 2018</item>
+        <item>April 21, 2018</item>
+        <item>April 21, 2018</item>
     </string-array>
 </resources>

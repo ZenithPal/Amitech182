@@ -108,19 +108,31 @@ public class EventActivity extends AppCompatActivity {
 
     private ArrayList<FestEvent> getFestEvents(Context context){
         int i = 0;
-        String[] eventNames;
+        String[] eventNames,eventVenue, eventTime, eventDate;
         ArrayList<FestEvent> events = new ArrayList<>();
 
-        eventNames = context.getResources().getStringArray(R.array.event_name_arraylist);
-        while(++i < eventNames.length){
-            events.add(new FestEvent(eventNames[i]));
+        eventNames = context.getResources().getStringArray(R.array.event_name);
+        eventVenue = context.getResources().getStringArray(R.array.venue_array);
+        eventTime = context.getResources().getStringArray(R.array.time_array);
+        eventDate = context.getResources().getStringArray(R.array.date_array);
+        while(i < eventNames.length){
+            events.add(new FestEvent(eventNames[i], eventVenue[i], eventTime[i], eventDate[i]));
+            i++;
         }
         Collections.sort(events, new Comparator<FestEvent>()
         {
             @Override
             public int compare(FestEvent o1, FestEvent o2)
             {
-                return o1.getHead().compareTo(o2.getHead());
+                if(o1.getEventDate().compareTo(o2.getEventDate()) == 0){
+                    if(o1.getEventTime().charAt(0) == '0'  && o2.getEventTime().charAt(0) == '1' || o1.getEventTime().charAt(0) == '1'  && o2.getEventTime().charAt(0) == '0')
+                        return -o1.getEventTime().compareTo(o2.getEventTime());
+                    else
+                        return o1.getEventTime().compareTo(o2.getEventTime());
+                }
+                else{
+                    return o1.getEventDate().compareTo(o2.getEventDate());
+                }
             }
         });
         return events;
@@ -132,12 +144,15 @@ public class EventActivity extends AppCompatActivity {
 
         public class ViewHolder extends RecyclerView.ViewHolder {
             // each data item is just a string in this case
-            public TextView mEvent;
+            public TextView mEvent,mTime,mVenue,mDate;
             FloatingActionButton mAdd;
             public ViewHolder(View v) {
                 super(v);
                 mEvent = v.findViewById(R.id.event_name);
+                mVenue = v.findViewById(R.id.event_venue);
+                mTime = v.findViewById(R.id.event_time);
                 mAdd = v.findViewById(R.id.add_to_calender);
+                mDate = v.findViewById(R.id.event_date);
             }
         }
         public EventAdapter(ArrayList<FestEvent> FestEvents){
@@ -155,10 +170,18 @@ public class EventActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(EventAdapter.ViewHolder holder, int position) {
+
             final FestEvent eve = mFestEvents.get(position);
-            TextView textView0 = holder.mEvent;
+            TextView event = holder.mEvent;
+            TextView time = holder.mTime;
+            TextView venue = holder.mVenue;
+            TextView date = holder.mDate;
             FloatingActionButton add = holder.mAdd;
-            textView0.setText(eve.getHead());
+            event.setText(eve.getHead());
+            date.setText(eve.getEventDate());
+            time.setText(eve.getEventTime());
+            venue.setText(eve.getEventVenue());
+
             add.setOnClickListener(new View.OnClickListener() {
                 @RequiresApi(api = Build.VERSION_CODES.M)
                 @Override
@@ -187,6 +210,7 @@ public class EventActivity extends AppCompatActivity {
                 }
             });
         }
+
 
         @Override
         public int getItemCount() {
