@@ -2,6 +2,7 @@ package fgc.amitech18;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -176,4 +178,16 @@ public class EventDetailActivity extends AppCompatActivity {
        }
       return data;
    }*/
+   public void facebook(View view)
+   {
+       Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/amitech.aset/"));
+       startActivity(browserIntent);
+   }
+
+   public void whatsapp(View view)
+   {
+       Uri uri = Uri.parse("https://api.whatsapp.com/send?phone=+91" + card_data.getEvent_wtsapno());
+       Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+       startActivity(intent);
+   }
 }

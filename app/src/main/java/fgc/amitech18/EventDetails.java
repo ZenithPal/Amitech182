@@ -14,11 +14,12 @@ public class EventDetails {
     public String event_members; //team size
     public String event_location; //On campus location
     public String event_rules; //guidelines
+    public String event_wtsapno; //whatsapp no.
     public int event_favorite;
     public int event_img;
     public int card_pos; //position of the card in the rv
 
-    public EventDetails(String title, String desc, String date, String cat, String teamsize, String loc, String rule, int pos, int draw) {
+    public EventDetails(String title, String desc, String date, String cat, String teamsize, String loc, String rule, String wtsapno, int pos, int draw) {
         this.card_title = title;
         this.card_desc = desc;
         this.event_date = date;
@@ -26,6 +27,7 @@ public class EventDetails {
         this.event_members = teamsize;
         this.event_location = loc;
         this.event_rules = rule;
+        this.event_wtsapno = wtsapno;
         this.card_pos = pos;
         this.event_img = draw;
     }
@@ -211,8 +213,10 @@ public class EventDetails {
         String[] loc;
         String[] rule;
         String[] date;
+        String[] wtsapno;
         int[] pos;
         int[] image;
+
 
         title = new String[]{
                 //BEST OF AMITECH
@@ -263,6 +267,13 @@ public class EventDetails {
                 "Booth 3"
         };
 
+        wtsapno = new String[]{
+                "0100000000",
+                "0200000000",
+                "3000000000",
+                "4000000000"
+        };
+
         pos = new int[]{
                 1,
                 2,
@@ -276,8 +287,10 @@ public class EventDetails {
                 R.drawable.event_img2
         };
 
+
+
         for (int i = 0; i < pos.length; i++) {
-            event_card = new EventDetails(title[i], desc[i], date[i], cat[i], teamsize[i], loc[i], rule[i], pos[i], image[i]);
+            event_card = new EventDetails(title[i], desc[i], date[i], cat[i], teamsize[i], loc[i], rule[i], wtsapno[i], pos[i], image[i]);
             EventCard.add(event_card);
         }
         return EventCard;
@@ -294,6 +307,7 @@ public class EventDetails {
         String[] loc;
         String[] rule;
         String[] date;
+        String[] wtsapno;
         int[] pos;
         int[] image;
 
@@ -339,6 +353,12 @@ public class EventDetails {
                 "Booth 8"
         };
 
+        wtsapno = new String[]{
+                "5000000000",
+                "6000000000",
+                "7000000000"
+        };
+
         pos = new int[]{
                 1,
                 2,
@@ -351,7 +371,7 @@ public class EventDetails {
         };
 
         for (int i = 0; i < pos.length; i++) {
-            event_card = new EventDetails(title[i], desc[i], date[i], cat[i], teamsize[i], loc[i], rule[i], pos[i], image[i]);
+            event_card = new EventDetails(title[i], desc[i], date[i], cat[i], teamsize[i], loc[i], rule[i], wtsapno[i], pos[i], image[i]);
             EventCard.add(event_card);
         }
         return EventCard;
@@ -368,6 +388,7 @@ public class EventDetails {
         String[] loc;
         String[] rule;
         String[] date;
+        String[] wtsapno;
         int[] pos;
         int[] image;
 
@@ -421,6 +442,13 @@ public class EventDetails {
                 "Booth 3"
         };
 
+        wtsapno = new String[]{
+                "8000000000",
+                "9000000000",
+                "1000000000",
+                "1100000000"
+        };
+
         pos = new int[]{
 
                 1,
@@ -436,7 +464,7 @@ public class EventDetails {
         };
 
         for (int i = 0; i < pos.length; i++) {
-            event_card = new EventDetails(title[i], desc[i], date[i], cat[i], teamsize[i], loc[i], rule[i], pos[i], image[i]);
+            event_card = new EventDetails(title[i], desc[i], date[i], cat[i], teamsize[i], loc[i], rule[i], wtsapno[i], pos[i], image[i]);
             EventCard.add(event_card);
         }
         return EventCard;
@@ -453,6 +481,7 @@ public class EventDetails {
         String[] loc;
         String[] rule;
         String[] date;
+        String[] wtsapno;
         int[] pos;
         int[] image;
 
@@ -492,6 +521,11 @@ public class EventDetails {
                 "Main Stage"
         };
 
+        wtsapno = new String[]{
+                "1200000000",
+                "1300000000"
+        };
+
         pos = new int[]{
 
                 1,
@@ -504,7 +538,7 @@ public class EventDetails {
         };
 
         for (int i = 0; i < pos.length; i++) {
-            event_card = new EventDetails(title[i], desc[i], date[i], cat[i], teamsize[i], loc[i], rule[i], pos[i], image[i]);
+            event_card = new EventDetails(title[i], desc[i], date[i], cat[i], teamsize[i], loc[i], rule[i], wtsapno[i], pos[i], image[i]);
             EventCard.add(event_card);
         }
         return EventCard;
@@ -521,6 +555,7 @@ public class EventDetails {
         String[] loc;
         String[] rule;
         String[] date;
+        String[] wtsapno;
         int[] pos;
         int[] image;
 
@@ -574,6 +609,13 @@ public class EventDetails {
                 "Booth 3"
         };
 
+        wtsapno = new String[]{
+                "1400000000",
+                "1500000000",
+                "1600000000",
+                "1700000000"
+        };
+
         pos = new int[]{
 
                 1,
@@ -590,7 +632,7 @@ public class EventDetails {
         };
 
         for (int i = 0; i < pos.length; i++) {
-            event_card = new EventDetails(title[i], desc[i], date[i], cat[i], teamsize[i], loc[i], rule[i], pos[i], image[i]);
+            event_card = new EventDetails(title[i], desc[i], date[i], cat[i], teamsize[i], loc[i], rule[i], wtsapno[i], pos[i], image[i]);
             EventCard.add(event_card);
         }
         return EventCard;
@@ -607,6 +649,7 @@ public class EventDetails {
         String[] loc;
         String[] rule;
         String[] date;
+        String[] wtsapno;
         int[] pos;
         int[] image;
 
@@ -660,6 +703,12 @@ public class EventDetails {
                 "Booth 3"
         };
 
+        wtsapno = new String[]{
+                "1800000000",
+                "1900000000",
+                "2000000000",
+                "2100000000"
+        };
         pos = new int[]{
 
                 1,
@@ -676,7 +725,7 @@ public class EventDetails {
         };
 
         for (int i = 0; i < pos.length; i++) {
-            event_card = new EventDetails(title[i], desc[i], date[i], cat[i], teamsize[i], loc[i], rule[i], pos[i], image[i]);
+            event_card = new EventDetails(title[i], desc[i], date[i], cat[i], teamsize[i], loc[i], rule[i], wtsapno[i], pos[i], image[i]);
             EventCard.add(event_card);
         }
         return EventCard;
@@ -708,6 +757,10 @@ public class EventDetails {
 
     public String getEvent_rules() {
         return this.event_rules;
+    }
+
+    public String getEvent_wtsapno() {
+        return this.event_wtsapno;
     }
 
     public int getEvent_img() {

@@ -147,7 +147,8 @@
             android:layout_above="@+id/detail_btn_next"
             android:layout_alignStart="@+id/detail_tv_rule"
             android:layout_marginBottom="25dp"
-            android:foreground="@drawable/ic_ico_fb" />
+            android:foreground="@drawable/ic_ico_fb"
+            android:onClick="facebook" />
 
         <Button
             android:id="@+id/detail_btn_contact_whp"
@@ -158,7 +159,8 @@
             android:layout_alignBottom="@+id/detail_btn_contact_fb"
             android:layout_marginStart="@dimen/element_adj_margin"
             android:layout_toEndOf="@+id/detail_btn_contact_fb"
-            android:foreground="@drawable/ic_ico_wp" />
+            android:foreground="@drawable/ic_ico_wp"
+            android:onClick="whatsapp" />
 
         <Button
             android:id="@+id/detail_btn_prev"
