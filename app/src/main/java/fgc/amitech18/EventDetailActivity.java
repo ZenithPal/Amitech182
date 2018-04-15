@@ -183,4 +183,11 @@ public class EventDetailActivity extends AppCompatActivity {
        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/amitech.aset/"));
        startActivity(browserIntent);
    }
+
+   public void whatsapp(View view)
+   {
+       Uri uri = Uri.parse("https://api.whatsapp.com/send?phone=+91" + card_data.getEvent_wtsapno());
+       Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+       startActivity(intent);
+   }
 }
