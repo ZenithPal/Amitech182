@@ -71,7 +71,7 @@
             android:layout_alignBottom="@+id/dash_vp_title"
 
             android:scaleType="centerCrop"
-            android:src="@drawable/event_img1" />
+            android:src="@drawable/event_img5" />
 
         <TextSwitcher
             android:id="@+id/switcher"

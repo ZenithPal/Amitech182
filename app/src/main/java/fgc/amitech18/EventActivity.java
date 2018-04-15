@@ -115,10 +115,12 @@ public class EventActivity extends AppCompatActivity {
         eventVenue = context.getResources().getStringArray(R.array.venue_array);
         eventTime = context.getResources().getStringArray(R.array.time_array);
         eventDate = context.getResources().getStringArray(R.array.date_array);
+
         while(i < eventNames.length){
             events.add(new FestEvent(eventNames[i], eventVenue[i], eventTime[i], eventDate[i]));
             i++;
         }
+
         Collections.sort(events, new Comparator<FestEvent>()
         {
             @Override
