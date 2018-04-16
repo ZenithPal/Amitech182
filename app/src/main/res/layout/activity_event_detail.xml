@@ -17,6 +17,7 @@
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/event_img1" />
 
+
         <ImageView
             android:id="@+id/detail_iv_gradient"
             android:layout_width="match_parent"

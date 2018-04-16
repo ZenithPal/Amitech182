@@ -8,7 +8,7 @@
     <string name="app_name">Amitech18</string>
     <string-array name="event_name">
 
-        <item> ALAAP(SOLO INDIAN MUSIC, DECIBEL)v</item>
+        <item> ALAAP(SOLO INDIAN MUSIC, DECIBEL)</item>
         <item>STAND UP COMEDY</item>
         <item>SERENADE(SOLO WESTERN MUSIC, DECIBEL)</item>
         <item>ALLEGRO(GROUP SONG, DECIBEL)</item>
@@ -58,10 +58,10 @@
 
     <string-array name="venue_array">
 
-        <item>I-2 HALL (MOOT COURT)</item>
-        <item>I-2 HALL (MOOT COURT) </item>
-        <item>I-2 HALL (MOOT COURT)</item>
-        <item>I-2 HALL (MOOT COURT) </item>
+        <item>I-2 HALL\n(MOOT COURT)</item>
+        <item>I-2 HALL\n(MOOT COURT) </item>
+        <item>I-2 HALL\n(MOOT COURT)</item>
+        <item>I-2 HALL\n(MOOT COURT) </item>
         <item>CLASSROOM 1</item>
         <item>CLASSROOM 2</item>
         <item>CLASSROOM 3</item>
@@ -69,12 +69,12 @@
         <item>CLASSROOM 2</item>
         <item>CLASSROOM 1</item>
         <item>CLASSROOM 2</item>
-        <item>I-2 HALL (MOOT COURT)</item>
-        <item>I-2 HALL (MOOT COURT)</item>
-        <item>I-2 HALL (MOOT COURT)</item>
-        <item>I-2 HALL (MOOT COURT)</item>
-        <item>I-2 HALL (MOOT COURT)</item>
-        <item>I-2 HALL (MOOT COURT)</item>
+        <item>I-2 HALL\n(MOOT COURT)</item>
+        <item>I-2 HALL\n(MOOT COURT)</item>
+        <item>I-2 HALL\n(MOOT COURT)</item>
+        <item>I-2 HALL\n(MOOT COURT)</item>
+        <item>I-2 HALL\n(MOOT COURT)</item>
+        <item>I-2 HALL\n(MOOT COURT)</item>
         <item>CLASSROOM 1</item>
         <item>CLASSROOM 2</item>
         <item>CLASSROOM 3</item>

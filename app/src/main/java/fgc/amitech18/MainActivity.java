@@ -153,6 +153,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             case R.id.sponsor:// i=new Intent(MainActivity.this,SponsorActivity.class);
                                 startActivity(new Intent(MainActivity.this, SponsorActivity.class));
                                 break;
+                            case R.id.eventshe:  startActivity(new Intent(MainActivity.this, EventSchedule.class));finish();break;
 
                             case R.id.events: //i=new Intent(MainActivity.this,EventActivity.class);
                                 startActivity(new Intent(MainActivity.this, EventActivity.class));
