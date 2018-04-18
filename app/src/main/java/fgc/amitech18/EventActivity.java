@@ -1,6 +1,7 @@
 package fgc.amitech18;
 
 import android.Manifest;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -117,7 +118,7 @@ public class EventActivity extends AppCompatActivity {
         eventDate = context.getResources().getStringArray(R.array.date_array);
 
         while(i < eventNames.length){
-            events.add(new FestEvent(eventNames[i], eventVenue[i], eventTime[i], eventDate[i]));
+            events.add(new FestEvent(eventNames[i], eventVenue[i], eventTime[i], eventDate[i], R.drawable.sample_poster));
             i++;
         }
 
@@ -209,6 +210,15 @@ public class EventActivity extends AppCompatActivity {
 
                     else
                         requestPermissions(permissions, 100);
+                }
+            });
+
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    FragmentManager fm = getFragmentManager();
+                    EventDialogFragment dFragment = new EventDialogFragment(eve.getImageID());
+                    dFragment.show(fm, "Event Poster");
                 }
             });
         }
