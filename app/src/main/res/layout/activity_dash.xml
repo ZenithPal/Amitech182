@@ -22,7 +22,7 @@
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="56dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:background="?attr/colorPrimary"
@@ -70,6 +70,8 @@
 
             android:layout_alignBottom="@+id/dash_vp_title"
 
+            android:background="@color/cardview_light_background"
+            android:elevation="4dp"
             android:scaleType="centerCrop"
             android:src="@drawable/event_img5" />
 
@@ -78,6 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/dash_tv_vptitle"
+            android:elevation="4dp"
             android:textSize="20sp" />
 
         <TextView
@@ -87,6 +90,7 @@
             android:layout_alignTop="@+id/dash_vp_title"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="36dp"
+            android:elevation="4dp"
             android:fontFamily="@font/satisfy"
             android:includeFontPadding="false"
             android:text="Amitech 2018"
@@ -126,7 +130,6 @@
             android:layout_above="@+id/dash_rv_catlist"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/dash_tv_cat_title"
-            android:paddingStart="15dp"
             android:scrollbarAlwaysDrawHorizontalTrack="false"
             android:scrollbarAlwaysDrawVerticalTrack="false"
             tools:listitem="@layout/dash_rv_eventcard" />
