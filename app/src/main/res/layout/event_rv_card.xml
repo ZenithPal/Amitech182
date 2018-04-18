@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <fgc.amitech18.ScrollingTextView
+            <TextView
                 android:id="@+id/event_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -36,9 +36,9 @@
                 android:focusableInTouchMode="true"
                 android:fontFamily="@font/oxygen_bold"
                 android:freezesText="true"
+                
                 android:marqueeRepeatLimit="marquee_forever"
                 android:scrollHorizontally="true"
-
                 android:singleLine="true"
                 android:text="Title event"
                 android:textAllCaps="true"
