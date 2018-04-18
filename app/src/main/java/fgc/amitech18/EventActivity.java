@@ -109,16 +109,17 @@ public class EventActivity extends AppCompatActivity {
 
     private ArrayList<FestEvent> getFestEvents(Context context){
         int i = 0;
-        String[] eventNames,eventVenue, eventTime, eventDate;
+        String[] eventNames,eventVenue, eventTime, eventDate, eventcategory;
         ArrayList<FestEvent> events = new ArrayList<>();
 
         eventNames = context.getResources().getStringArray(R.array.event_name);
         eventVenue = context.getResources().getStringArray(R.array.venue_array);
         eventTime = context.getResources().getStringArray(R.array.time_array);
         eventDate = context.getResources().getStringArray(R.array.date_array);
+        eventcategory = context.getResources().getStringArray(R.array.category_array);
 
         while(i < eventNames.length){
-            events.add(new FestEvent(eventNames[i], eventVenue[i], eventTime[i], eventDate[i], R.drawable.sample_poster));
+            events.add(new FestEvent(eventNames[i], eventVenue[i], eventTime[i], eventDate[i], R.drawable.sample_poster, eventcategory[i]));
             i++;
         }
 
@@ -147,7 +148,7 @@ public class EventActivity extends AppCompatActivity {
 
         public class ViewHolder extends RecyclerView.ViewHolder {
             // each data item is just a string in this case
-            public TextView mEvent,mTime,mVenue,mDate;
+            public TextView mEvent, mTime, mVenue, mDate, mEventCategory;
             FloatingActionButton mAdd;
             public ViewHolder(View v) {
                 super(v);
@@ -156,6 +157,7 @@ public class EventActivity extends AppCompatActivity {
                 mTime = v.findViewById(R.id.event_time);
                 mAdd = v.findViewById(R.id.add_to_calender);
                 mDate = v.findViewById(R.id.event_date);
+                mEventCategory = v.findViewById(R.id.event_category);
             }
         }
         public EventAdapter(ArrayList<FestEvent> FestEvents){
@@ -175,17 +177,33 @@ public class EventActivity extends AppCompatActivity {
         public void onBindViewHolder(EventAdapter.ViewHolder holder, int position) {
 
             final FestEvent eve = mFestEvents.get(position);
-            TextView event = holder.mEvent;
-            TextView time = holder.mTime;
-            TextView venue = holder.mVenue;
-            TextView date = holder.mDate;
-            FloatingActionButton add = holder.mAdd;
-            event.setText(eve.getHead());
-            date.setText(eve.getEventDate());
-            time.setText(eve.getEventTime());
-            venue.setText(eve.getEventVenue());
+            holder.mEvent.setText(eve.getHead());
+            holder.mDate.setText(eve.getEventDate());
+            holder.mTime.setText(eve.getEventTime());
+            holder.mVenue.setText(eve.getEventVenue());
+            if(eve.getEventCategory().compareToIgnoreCase("none") != 0)
+                holder.mEventCategory.setText(eve.getEventCategory());
+            switch(eve.getEventCategory())
+            {
+                case "Technical":
+                    holder.mEventCategory.setBackgroundColor(getResources().getColor(R.color.colorTechnicalDark));
+                    holder.mAdd.setBackgroundTintList(getResources().getColorStateList(R.color.colorTechnicalDark));
+                    break;
+                case "Fun":
+                    holder.mEventCategory.setBackgroundColor(getResources().getColor(R.color.colorFunDark));
+                    holder.mAdd.setBackgroundTintList(getResources().getColorStateList(R.color.colorFunDark));
+                    break;
+                case "Cultural":
+                    holder.mEventCategory.setBackgroundColor(getResources().getColor(R.color.colorCulturalDark));
+                    holder.mAdd.setBackgroundTintList(getResources().getColorStateList(R.color.colorCulturalDark));
+                    break;
+                case "Literary":
+                    holder.mEventCategory.setBackgroundColor(getResources().getColor(R.color.colorLiteraryDark));
+                    holder.mAdd.setBackgroundTintList(getResources().getColorStateList(R.color.colorLiteraryDark));
+                    break;
+            }
 
-            add.setOnClickListener(new View.OnClickListener() {
+            holder.mAdd.setOnClickListener(new View.OnClickListener() {
                 @RequiresApi(api = Build.VERSION_CODES.M)
                 @Override
                 public void onClick(View view) {
@@ -200,7 +218,6 @@ public class EventActivity extends AppCompatActivity {
                             .putExtra(CalendarContract.Events.EVENT_LOCATION, "Amity University, Noida")
                             .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.getTimeInMillis())
                             .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime.getTimeInMillis());
-
                     if(ContextCompat.checkSelfPermission(EventActivity.this
                             , Manifest.permission.READ_CALENDAR )== PackageManager.PERMISSION_GRANTED
                             && ContextCompat.checkSelfPermission(EventActivity.this, Manifest.permission.WRITE_CALENDAR)

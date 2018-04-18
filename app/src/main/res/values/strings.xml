@@ -6,30 +6,6 @@
         <item name="contactUs">Contact Us</item>
     </string-array>
     <string name="app_name">Amitech18</string>
-    <string-array name="event_name">
-
-        <item> ALAAP(SOLO INDIAN MUSIC, DECIBEL)</item>
-        <item>STAND UP COMEDY</item>
-        <item>SERENADE(SOLO WESTERN MUSIC, DECIBEL)</item>
-        <item>ALLEGRO(GROUP SONG, DECIBEL)</item>
-        <item>PIXEL JONES</item>
-        <item>LOGO MANIA (Quiz)</item>
-        <item>LAN GAMING (IEEE)</item>
-        <item> COOK WITHOUT FIRE</item>
-        <item>ARGUMENTUM (ENG + HINDI DEBATE, WORDSWORTH)</item>
-        <item>BHAAVNAYEIN (MONOACT O3)</item>
-        <item>THE GOLDEN SNITCH(QUIZ, WORDSWORTH)</item>
-        <item>JAM SESSION</item>
-        <item>NATRAJ (SOLO DANCE, D-MATRIX)</item>
-        <item>TECHNOVATION (I-CELL)</item>
-        <item>STEPPING UP (GROUP DANCE, D-MATRIX)</item>
-        <item>CLOSING CEREMONY</item>
-        <item>JAM SESSION</item>
-        <item>HACKATHON (IEEE)</item>
-        <item>LAN GAMING (IEEE)</item>
-        <item>LET"'"S BOUNCE (ZORBING)</item>
-
-    </string-array>
 
     <string-array name="time_array">
 
@@ -92,7 +68,7 @@
         <item>April 20, 2018</item>
         <item>April 20, 2018</item>
         <item>April 20, 2018</item>
-        <item>April 21, 2018</item>
+        <item>April 20, 2018</item>
         <item>April 21, 2018</item>
         <item>April 21, 2018</item>
         <item>April 21, 2018</item>
@@ -102,4 +78,48 @@
         <item>April 21, 2018</item>
         <item>April 21, 2018</item>
     </string-array>
+    <string-array name="event_name">
+        <item> ALAAP(SOLO INDIAN MUSIC, DECIBEL)</item>
+        <item>STAND UP COMEDY</item>
+        <item>SERENADE(SOLO WESTERN MUSIC, DECIBEL)</item>
+        <item>ALLEGRO(GROUP SONG, DECIBEL)</item>
+        <item>PIXEL JONES</item>
+        <item>LOGO MANIA (Quiz)</item>
+        <item>LAN GAMING (IEEE)</item>
+        <item>COOK WITHOUT FIRE</item>
+        <item>ARGUMENTUM (ENG + HINDI DEBATE, WORDSWORTH)</item>
+        <item>BHAAVNAYEIN (MONOACT O3)</item>
+        <item>THE GOLDEN SNITCH(QUIZ, WORDSWORTH)</item>
+        <item>JAM SESSION</item>
+        <item>NATRAJ (SOLO DANCE, D-MATRIX)</item>
+        <item>TECHNOVATION (I-CELL)</item>
+        <item>STEPPING UP (GROUP DANCE, D-MATRIX)</item>
+        <item>CLOSING CEREMONY</item>
+        <item>JAM SESSION</item>
+        <item>HACKATHON (IEEE)</item>
+        <item>LAN GAMING (IEEE)</item>
+        <item>LET"'"S BOUNCE (ZORBING)</item>
+    </string-array>
+    <string-array name="category_array">
+        <item>Cultural</item>
+        <item>Cultural</item>
+        <item>Cultural</item>
+        <item>Cultural</item>
+        <item>Technical</item>
+        <item>Technical</item>
+        <item>Technical</item>
+        <item>Fun</item>
+        <item>Literary</item>
+        <item>Cultural</item>
+        <item>Literary</item>
+        <item>Fun</item>
+        <item>Cultural</item>
+        <item>Technical</item>
+        <item>Cultural</item>
+        <item>none</item>
+        <item>Fun</item>
+        <item>Technical</item>
+        <item>Technical</item>
+        <item>Fun</item>
+    </string-array>>
 </resources>
