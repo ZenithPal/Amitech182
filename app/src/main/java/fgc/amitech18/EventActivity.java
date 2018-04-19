@@ -49,7 +49,7 @@ public class EventActivity extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.my_recycler_view);
         mRecyclerView.setHasFixedSize(true);
         NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.getMenu().getItem(1).setChecked(true);
+        //navigationView.getMenu().getItem(1).setChecked(true);
         mFestEvents = getFestEvents(getApplicationContext());
        mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         EventAdapter mAdapter = new EventAdapter(mFestEvents);
@@ -58,7 +58,7 @@ public class EventActivity extends AppCompatActivity {
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
-                        // menuItem.setChecked(true);
+                        menuItem.setChecked(true);
                         mDrawerLayout.closeDrawers();
                         switch (menuItem.getItemId()) {
                             case R.id.house:
@@ -119,7 +119,7 @@ public class EventActivity extends AppCompatActivity {
         eventcategory = context.getResources().getStringArray(R.array.category_array);
 
         while(i < eventNames.length){
-            events.add(new FestEvent(eventNames[i], eventVenue[i], eventTime[i], eventDate[i], R.drawable.sample_poster, eventcategory[i]));
+            events.add(new FestEvent(eventNames[i], eventVenue[i], eventTime[i], eventDate[i], R.drawable.event_img1, eventcategory[i]));
             i++;
         }
 
