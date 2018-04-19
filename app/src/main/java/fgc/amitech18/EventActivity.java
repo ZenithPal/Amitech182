@@ -39,7 +39,6 @@ public class EventActivity extends AppCompatActivity {
     private FastScrollRecyclerView mRecyclerView;
     private ArrayList<FestEvent> mFestEvents = new ArrayList<>();
 
-    int PERMISSION_CODE = 100;
     String[] permissions = {Manifest.permission.WRITE_CALENDAR , Manifest.permission.READ_CALENDAR};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,7 +118,7 @@ public class EventActivity extends AppCompatActivity {
         eventcategory = context.getResources().getStringArray(R.array.category_array);
 
         while(i < eventNames.length){
-            events.add(new FestEvent(eventNames[i], eventVenue[i], eventTime[i], eventDate[i], R.drawable.sample_poster, eventcategory[i]));
+            events.add(new FestEvent(eventNames[i], eventVenue[i], eventTime[i], eventDate[i], getResources().getIdentifier("pic_"+(i+1), "drawable", getPackageName()), eventcategory[i]));
             i++;
         }
 

@@ -21,14 +21,14 @@
         <item>03:00PM-04:30PM</item>
         <item>03:00PM-04:30PM</item>
         <item>04:30PM-05:30PM</item>
+        <item>10:00AM-05:30PM</item>
         <item>10:00AM-11:30AM</item>
         <item>11:30AM-01:30PM</item>
         <item>01:30PM-03:00PM</item>
-        <item>03:00PM-04:30PM</item>
         <item>04:30PM-05:30PM</item>
         <item>11:00AM-03:00PM</item>
         <item>11:00AM-03:00PM</item>
-        <item>12:30PM-01:30PM</item>
+        <item>10:00PM-05:30PM</item>
 
     </string-array>
 
@@ -46,14 +46,14 @@
         <item>CLASSROOM 1</item>
         <item>CLASSROOM 2</item>
         <item>I-2 HALL\n(MOOT COURT)</item>
-        <item>I-2 HALL\n(MOOT COURT)</item>
+        <item>metal strength</item>
         <item>I-2 HALL\n(MOOT COURT)</item>
         <item>I-2 HALL\n(MOOT COURT)</item>
         <item>I-2 HALL\n(MOOT COURT)</item>
         <item>I-2 HALL\n(MOOT COURT)</item>
         <item>CLASSROOM 1</item>
         <item>CLASSROOM 2</item>
-        <item>CLASSROOM 3</item>
+        <item>chess</item>
 
     </string-array>
     <string-array name="date_array">
@@ -69,7 +69,7 @@
         <item>April 20, 2018</item>
         <item>April 20, 2018</item>
         <item>April 20, 2018</item>
-        <item>April 21, 2018</item>
+        <item>April 20, 2018</item>
         <item>April 21, 2018</item>
         <item>April 21, 2018</item>
         <item>April 21, 2018</item>
@@ -79,26 +79,26 @@
         <item>April 21, 2018</item>
     </string-array>
     <string-array name="event_name">
-        <item> ALAAP(SOLO INDIAN MUSIC, DECIBEL)</item>
+        <item>ALAAP(SOLO INDIAN MUSIC, DECIBEL)</item>
         <item>STAND UP COMEDY</item>
         <item>SERENADE(SOLO WESTERN MUSIC, DECIBEL)</item>
         <item>ALLEGRO(GROUP SONG, DECIBEL)</item>
         <item>PIXEL JONES</item>
-        <item>LOGO MANIA (Quiz)</item>
+        <item>LOGO QUIZ</item>
         <item>LAN GAMING (IEEE)</item>
         <item>COOK WITHOUT FIRE</item>
-        <item>ARGUMENTUM (ENG + HINDI DEBATE, WORDSWORTH)</item>
+        <item>ARGUMENTATION (ENG + HINDI DEBATE, WORDSWORTH)</item>
         <item>BHAAVNAYEIN (MONOACT O3)</item>
         <item>THE GOLDEN SNITCH(QUIZ, WORDSWORTH)</item>
         <item>JAM SESSION</item>
+        <item>METAL STRENGTH</item>
         <item>NATRAJ (SOLO DANCE, D-MATRIX)</item>
         <item>TECHNOVATION (I-CELL)</item>
-        <item>STEPPING UP (GROUP DANCE, D-MATRIX)</item>
-        <item>CLOSING CEREMONY</item>
+        <item>DUET DANCE</item>
         <item>JAM SESSION</item>
-        <item>HACKATHON (IEEE)</item>
+        <item>CODESENSE (IEEE)</item>
         <item>LAN GAMING (IEEE)</item>
-        <item>LET"'"S BOUNCE (ZORBING)</item>
+        <item>CHESS</item>
     </string-array>
     <string-array name="category_array">
         <item>Cultural</item>
@@ -113,10 +113,10 @@
         <item>Cultural</item>
         <item>Literary</item>
         <item>Fun</item>
+        <item>Fun</item>
         <item>Cultural</item>
         <item>Technical</item>
         <item>Cultural</item>
-        <item>none</item>
         <item>Fun</item>
         <item>Technical</item>
         <item>Technical</item>
