@@ -68,46 +68,33 @@ public class Sponsor {
                 "Title sponsor",
                 "Power sponsor",
                 "Associate sponsor",
-                "Associate sponsor",
-                "Drinks partner",
-                "Desserts partner",
-                "Technology partner",
-                "Event sponsor",
-                "Clarity partner"
+                "Technology partner"
+
         };
         spoPost = new String[]{
 
-                "Vivo",
                 "ACE Academy",
-                "Kreatryx",
-                "Dena bank",
-                "Pepsi",
-                "Baskin Robbins",
-                "Feels Goods Creations",
-                "Worlds of wonder",
-                "Lenskart"
+                "Career Launcher",
+                "Developing Success Institute",
+                "Feels Goods Creations"
+
         };
         spoName = new String[]{
-                "Camera & Music",
+
                 "Engineering Academy",
-                "GATE/PSU/SSC Preparation Simplified",
-                "Dena hai toh Bharosa hai",
-                "",
-                "",
-                "Spreading happiness feels good",
-                "Place of wow moments",
-                "Spexy is the new sexy"
+                "Helping the youth of the country achieve their career dreams",
+                "One thing that matters to you and us, is your result and success",
+
+                "Spreading happiness feels good"
+
         };
         picture=new int[]{
                 R.drawable.ic_launcher_background,
-                R.drawable.ic_launcher_foreground,
-                R.drawable.ic_launcher_background,
-                R.drawable.ic_launcher_foreground,
-                R.drawable.ic_launcher_background,
-                R.drawable.ic_launcher_foreground,
-                R.drawable.ic_launcher_background,
-                R.drawable.ic_launcher_foreground,
+                R.drawable.logo_ace_academy,
+                R.drawable.logo_career_launcher,
+                R.drawable.logo_devloping_success,
                 R.drawable.ic_launcher_background
+
         };
         crown=new int[]{
 
@@ -115,16 +102,13 @@ public class Sponsor {
                 Color.parseColor("#FBC02D"),
                 Color.parseColor("#BDBDBD"),
                 Color.parseColor("#795548"),
-                Color.parseColor("#2E7D32"),
-                Color.parseColor("#FBC02D"),
-                Color.parseColor("#FBC02D"),
-                Color.parseColor("#FBC02D"),
-                Color.parseColor("#FBC02D"),
+
                 Color.parseColor("#FBC02D")
+
 
         };
 
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 4; i++) {
             sponsor_card = new Sponsor(spoHead[i],spoPost[i], spoName[i],picture[i],crown[i]);
             sponsors.add(sponsor_card);
 

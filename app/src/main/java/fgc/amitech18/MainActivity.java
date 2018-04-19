@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             Random rand = new Random();
             int mCounter = rand.nextInt(6);
             mSwitcher.setText(change_text[mCounter]);
+
             // Repeat every 2 seconds
             handler.postDelayed(runnable, SPLASH_TIME_OUT);
         }
@@ -140,8 +141,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                             case R.id.contact:
                                 // i=new Intent(MainActivity.this,Contact_activity.class);
-                                //startActivity(new Intent(MainActivity.this,Contact_activity.class));  break;
-                                //Snackbar snackbar = Snackbar.make(findViewById(R.id.dash_rv_catlist),R.string.snack,Snackbar.LENGTH_SHORT);
+                                startActivity(new Intent(MainActivity.this,Contact_activity.class));  finish();
+                                //Snackbar snackbar = Snackbar.make(findViewById(R.id.dash_rv_catlist),R.string.snack,Snackbar.ENGTH_SHORT);
                                 //snackbar.show();
                                 break;
                             //Fragment fragment = new ContactActivity();
@@ -151,7 +152,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             //  startActivity(i); finish(); break;
 
                             case R.id.sponsor:// i=new Intent(MainActivity.this,SponsorActivity.class);
-                                startActivity(new Intent(MainActivity.this, SponsorActivity.class));
+                                startActivity(new Intent(MainActivity.this, SponsorActivity.class));finish();
                                 break;
                             case R.id.eventshe:  startActivity(new Intent(MainActivity.this, EventSchedule.class));finish();break;
 

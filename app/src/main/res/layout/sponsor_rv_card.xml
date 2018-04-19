@@ -2,36 +2,37 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="wrap_content"
-     >
+     android:layout_marginStart="6dp" >
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="108dp"
         android:layout_height="108dp"
+        android:scaleType="fitCenter"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginBottom="13dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="13dp"
-        android:background="@drawable/shape"
+        android:layout_marginLeft="10dp"
         android:elevation="8dp"
+        android:background="@drawable/shape"
 
-        android:scaleType="fitCenter" />
+android:layout_marginBottom="20dp"
+        />
 
     <TextView
         android:id="@+id/event_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/imageView"
+        android:layout_marginLeft="4dp"
+        android:layout_toEndOf="@+id/imageView6"
         android:fontFamily="@font/oxygen_bold"
         android:text="Title sponsor"
-        android:layout_toEndOf="@+id/imageView6"
-        android:layout_marginStart="10dp"
-
-        android:textStyle="bold"
         android:textAllCaps="true"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:textColor="#424242" />
+        android:textColor="#424242"
+        android:textStyle="bold" />
 
 
     <TextView
@@ -40,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/event_name"
 
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="14dp"
         android:layout_toEndOf="@+id/imageView"
         android:fontFamily="sans-serif-smallcaps"
@@ -57,27 +58,22 @@
         android:layout_below="@+id/textView0"
         android:fontFamily="@font/oxygen"
         android:layout_marginTop="3dp"
+        android:layout_marginBottom="8dp"
         android:text="Yes I am"
-        android:textAllCaps="true"
+
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="#616161" />
 
-   <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="1.5dp"
-android:layout_below="@+id/imageView"
-       android:layout_marginTop="13dp"
-        android:background="#E0E0E0" />
+
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/event_name"
+
         android:tint="@color/colorPrimary"
         android:layout_alignStart="@+id/textView0"
-
+        android:layout_alignTop="@+id/imageView"
         app:srcCompat="@drawable/ic_royal_crown" />
 
 

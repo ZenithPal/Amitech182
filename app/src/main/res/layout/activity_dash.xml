@@ -83,7 +83,7 @@
             android:elevation="4dp"
             android:textSize="20sp" />
 
-        <TextView
+        <ImageView
             android:id="@+id/dash_tv_vptitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -91,11 +91,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="36dp"
             android:elevation="4dp"
-            android:fontFamily="@font/satisfy"
-            android:includeFontPadding="false"
-            android:text="Amitech 2018"
-            android:textColor="#fff"
-            android:textSize="45sp" />
+            android:src="@drawable/ic_launcher_background"/>
 
 
         <TextView
