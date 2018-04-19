@@ -108,17 +108,17 @@ public class EventActivity extends AppCompatActivity {
 
     private ArrayList<FestEvent> getFestEvents(Context context){
         int i = 0;
-        String[] eventNames,eventVenue, eventTime, eventDate, eventcategory;
+        String[] eventNames,eventVenue, eventTime, eventDate, eventCategory;
         ArrayList<FestEvent> events = new ArrayList<>();
 
         eventNames = context.getResources().getStringArray(R.array.event_name);
         eventVenue = context.getResources().getStringArray(R.array.venue_array);
         eventTime = context.getResources().getStringArray(R.array.time_array);
         eventDate = context.getResources().getStringArray(R.array.date_array);
-        eventcategory = context.getResources().getStringArray(R.array.category_array);
+        eventCategory = context.getResources().getStringArray(R.array.category_array);
 
         while(i < eventNames.length){
-            events.add(new FestEvent(eventNames[i], eventVenue[i], eventTime[i], eventDate[i], getResources().getIdentifier("pic_"+(i+1), "drawable", getPackageName()), eventcategory[i]));
+            events.add(new FestEvent(eventNames[i], eventVenue[i], eventTime[i], eventDate[i], getResources().getIdentifier("pic_"+(i+1), "drawable", getPackageName()), eventCategory[i]));
             i++;
         }
 
